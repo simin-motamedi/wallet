@@ -123,4 +123,6 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'daily_spending_limit' => env('DAILY_SPENDING_LIMIT', 1000000),
+
 ];

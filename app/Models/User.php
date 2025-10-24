@@ -13,6 +13,13 @@ class User extends Authenticatable
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
 
+    protected $hidden = [
+        'id',
+        'status',
+        'created_at',
+        'updated_at',
+    ];
+
     public function wallets(): HasMany
     {
         return $this->hasMany(Wallet::class);
